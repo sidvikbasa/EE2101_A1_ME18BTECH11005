@@ -1,0 +1,78 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{mathtools}
+\usepackage{setspace}
+\usepackage{amssymb}
+\onehalfspacing
+
+\date{}
+\begin{document}
+	\pagenumbering{arabic}
+	\section*{Question No. 63}
+	\section*{Name:    B. Sidvik}
+	\section*{Roll no.: ME18BTECH11005}
+
+	\subsection*{Given:}
+			$N(t)$ is the population density observed at time t
+		
+			K is the rate of reproduction per unit time
+		
+			The differential equation in terms of population density at time t and the time of calculation is given by,
+
+		\begin{equation*}
+			\frac{dN(t)}{dt} = KN(t)
+		\end{equation*}
+	\subsection*{Assumption:}
+		Consider the value of K is independent wih respect to time t
+	\subsection*{Method - 1:}
+		From the given condition,
+		\begin{align*}
+			\frac{dN(t)}{dt} &= KN(t)\\
+			L \left( \frac{dN(t)}{dt} \right) &= L(K.N(t))\\
+			\intertext{Applying Laplace Transform on both sides,}
+			sN(s) - N(0) &= KN(s)\\
+			sN(s) - KN(s) &= {N_0}\\
+			N(s)(s - K) &= {N_0}\\
+			N(s) &= \frac{N_0}{(s - K)}\\
+			\intertext{Applying Inverse Laplace Transform on both sides,}
+			N(t) &= {N_0}.e^{Kt}\tag{a}\\
+		\end{align*}
+		The time taken to double the population density w.r.t. initial population density is,
+		\begin{align*}
+			N(t) &= 2{N_0}\\
+			\frac{N(t)}{N_0} &= 2\\
+			\intertext{From (a),}
+			e^{Kt} &= 2\\
+			Kt &= \log_e 2\\
+			t &= \frac{\log_e 2}{K}\tag{b}\\
+		\end{align*}
+			\subsection*{Method - 2:}
+		From the given condition,
+		\begin{align*}
+			\frac{dN(t)}{dt} &= KN(t)\\
+			\frac{dN(t)}{N(t)} &= Kdt\\
+			\intertext{Integrating on both the sides,}
+			\int^{N(t)}_{N_0} \frac{dN(t)}{N(t)} &= \int^{t}_{0} Kdt\\
+			\log_e {N(t)} \Big |_{N_0}^{N(t)} &= K.(t - 0)\\
+			\log_e {N(t)} - \log_e {N_0}  &= K.t\\
+			\log_e \left(\frac{N(t)}{N_0}\right)  &= K.t\\
+			\left(\frac{N(t)}{N_0}\right) &= e^{Kt}\\
+			N(t) &= {N_0}.e^{Kt}\tag{a}\\
+		\end{align*}
+		The time taken to double the population density w.r.t. initial population density is,
+		\begin{align*}
+			N(t) &= 2N(0)\\
+			\frac{N(t)}{N(0)} &= 2\\
+			\intertext{From (a),}
+			e^{Kt} &= 2\\
+			Kt &= \log_e 2\\
+			t &= \frac{\log_e 2}{K}\tag{b}\\
+		\end{align*}
+		
+		
+		Therefore the answers for (a) and (b) of the question are,
+		\begin{align*}
+			N(t) &= {N_0}.e^{Kt}\tag{a}\\
+			t &= \frac{\log_e 2}{K}\tag{b}\\
+		\end{align*}
+\end{document}

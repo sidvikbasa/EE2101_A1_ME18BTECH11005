@@ -1,30 +1,54 @@
-\documentclass{article}
+\documentclass{beamer}
 \usepackage{amsmath}
 \usepackage{mathtools}
-\usepackage{setspace}
-\usepackage{amssymb}
-\onehalfspacing
 
-\date{}
+\title{Assignment 1}
+\author{B. Sidvik\\
+ME18BTECH11005\\
+IIT Hyderabad}
 \begin{document}
 	\pagenumbering{arabic}
-	\section*{Question No. 63}
-	\section*{Name:    B. Sidvik}
-	\section*{Roll no.: ME18BTECH11005}
-
-	\subsection*{Given:}
-			$N(t)$ is the population density observed at time t
+	\begin{frame}
+		\titlepage
+	\end{frame}
+	
+	\begin{frame}
+	\begin{enumerate}
+		\item Question
+		\item Solution
+			\begin{enumerate}
+				\item Assumption
+				\item Method 1
+				\item Method 2
+			\end{enumerate}
+	\end{enumerate}
+	\end{frame}
+	
+	\begin{frame}
+	\frametitle{Question}
+	Given:
+	\begin{itemize}
+			\item $N(t)$ is the population density observed at time t
 		
-			K is the rate of reproduction per unit time
+			\item K is the rate of reproduction per unit time
 		
-			The differential equation in terms of population density at time t and the time of calculation is given by,
-
+			\item The differential equation in terms of population density at time t and the time of calculation is given by,
+	\end{itemize}
 		\begin{equation*}
 			\frac{dN(t)}{dt} = KN(t)
 		\end{equation*}
-	\subsection*{Assumption:}
+
+		The condition is to solve the above equation in terms of N(t) and t and obtain the time taken to double the population.
+	\end{frame}
+	
+	\begin{frame}
+	\frametitle{Assumption:}
 		Consider the value of K is independent wih respect to time t
-	\subsection*{Method - 1:}
+	\end{frame}
+	
+	\begin{frame}
+	\frametitle{Solution}
+	\textcolor{blue}{Method - 1:}
 		From the given condition,
 		\begin{align*}
 			\frac{dN(t)}{dt} &= KN(t)\\
@@ -37,6 +61,12 @@
 			\intertext{Applying Inverse Laplace Transform on both sides,}
 			N(t) &= {N_0}.e^{Kt}\tag{a}\\
 		\end{align*}
+	\end{frame}
+	
+	
+	\begin{frame}
+	\frametitle{Solution}
+	\textcolor{blue}{Method - 1:}
 		The time taken to double the population density w.r.t. initial population density is,
 		\begin{align*}
 			N(t) &= 2{N_0}\\
@@ -46,7 +76,12 @@
 			Kt &= \log_e 2\\
 			t &= \frac{\log_e 2}{K}\tag{b}\\
 		\end{align*}
-			\subsection*{Method - 2:}
+	\end{frame}
+
+	
+	\begin{frame}
+	\frametitle{Solution}
+	\textcolor{blue}{Method - 2:}
 		From the given condition,
 		\begin{align*}
 			\frac{dN(t)}{dt} &= KN(t)\\
@@ -59,6 +94,11 @@
 			\left(\frac{N(t)}{N_0}\right) &= e^{Kt}\\
 			N(t) &= {N_0}.e^{Kt}\tag{a}\\
 		\end{align*}
+	\end{frame}
+
+	\begin{frame}
+	\frametitle{Solution}
+	\textcolor{blue}{Method - 2:}
 		The time taken to double the population density w.r.t. initial population density is,
 		\begin{align*}
 			N(t) &= 2N(0)\\
@@ -68,11 +108,15 @@
 			Kt &= \log_e 2\\
 			t &= \frac{\log_e 2}{K}\tag{b}\\
 		\end{align*}
+	\end{frame}
 		
-		
+	\begin{frame}
+	\frametitle{Answers}
 		Therefore the answers for (a) and (b) of the question are,
 		\begin{align*}
 			N(t) &= {N_0}.e^{Kt}\tag{a}\\
 			t &= \frac{\log_e 2}{K}\tag{b}\\
 		\end{align*}
+	\end{frame}
+
 \end{document}
